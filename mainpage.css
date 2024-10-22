@@ -58,6 +58,10 @@ header {
     margin-top: 3.2rem;
     margin-bottom: 2.6rem;
 }
+.header-content p{
+    margin-bottom: 2.6rem;
+    line-height: 1.6rem;
+}
 
 h1 {
     font-size: 2.5em;
@@ -88,6 +92,7 @@ p {
 
 .button {
     display: inline-block;
+    text-transform: uppercase;
     padding: 15px 30px;
     font-size: 1em;
     color: #fff;
@@ -96,6 +101,7 @@ p {
     border-radius: 5px;
     transition: background-color 0.3s;
     margin-top: 2rem;
+    cursor: pointer;
 }
 
 .button:hover {
@@ -197,4 +203,108 @@ p {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.section-one{
+    padding: 64px 0;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+}
+.section-one-l{
+    max-width: 545px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.section-one-r{
+    margin-top: 4rem;
+
+}
+.section-one .btn-group{
+    margin-top: 2rem;
+}
+.section-one-r{
+    max-width: 545px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.section-one-r .btn-group{
+    margin-top: 3rem;
+}
+.section-two{
+    padding: 64px;
+    background: var(--clr-bright);
+}
+
+.section-two .section-items{
+    display: grid;
+    gap: 2rem;
+}
+
+.section-two .section-item{
+    max-width: 350px;
+    text-align: center;
+    margin: 0 auto;
+}
+.build{
+    text-align: center;
+}
+.section-two .section-item-icon{
+    margin: 1rem 0;
+}
+.section-two .section-item-title{
+    color:var(--clr-blue-dark);
+    font-weight: 600;
+    font-size: 1.8rem;
+}
+.section-two .text{
+    margin: 0.9rem;
+}
+.footer{
+    padding: 3rem 0;
+    background: var(--clr-dark);
+}
+.footer-content{
+    text-align: center;
+}
+.footer-content p{
+    color:var(--clr-grey)
+}
+
+.footer-content p span {
+    color: var(--clr-white);
+}
+@media screen and (min-width: 768px) {
+    .section-two .section-items{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .build{
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .section-one-content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 3rem;
+    }
+    .section-one-r {
+        text-align: left;
+    }
+    .section-two .section-items {
+        display: grid; 
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .section-two .section-item {
+        text-align: left;
+    }
+    .section-two .section-item-icon img {
+        margin-left: 0;
+    }
+    .build{
+        text-align: center;
+    }
 }
