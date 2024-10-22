@@ -118,7 +118,7 @@ form.addEventListener("submit", (e) => {
             margin: auto;
             padding: 20px;
             border: 1px solid #ddd;
-            background-color: #f9f9f9;
+            background-color: black;
             color: #333;
           }
           .resume-header {
@@ -194,7 +194,7 @@ form.addEventListener("submit", (e) => {
       const downloadLink = document.createElement("a");
       downloadLink.href = `data:text/html;charset=utf-8,${encodeURIComponent(resumeContent.innerHTML)}`;
       downloadLink.download = unique_path;
-      downloadLink.textContent = "Download Your 2024 Resume";
+      downloadLink.textContent = "Download Resume";
 
       // Create and configure the edit button
       const editButton = document.createElement("button");

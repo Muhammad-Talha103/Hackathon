@@ -1,0 +1,73 @@
+
+header {
+    background-image: url(./image/R.png);
+   
+    background-position: center;
+    padding: 40px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+h2 span {
+    background: linear-gradient(45deg, #f43f5e, #be185d); /* Gradient colors */
+    -webkit-background-clip: text; /* For Safari */
+    background-clip: text;
+    color: transparent; /* Makes the text transparent to show the gradient */
+    font-weight: bold; /* Optional: Make the text bold */
+    display: inline-block;
+}
+
+p {
+    font-size: 1em;
+    margin: 10px 0;
+    color: #666;
+}
+
+.button {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #007BFF; /* Blue button color */
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    margin-top: 2rem;
+}
+
+.button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.header-image {
+    max-width: 100%; /* Make image responsive */
+    height: auto; /* Maintain aspect ratio */
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.25em;
+    }
+
+    .button {
+        padding: 12px 20px;
+        font-size: 0.9em;
+    }
+}
