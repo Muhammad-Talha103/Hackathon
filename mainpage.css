@@ -42,7 +42,7 @@ a {
 }
 
 header {
-    background-image: url(./image/R.png);
+    /* background-image: url(./image/R.png); */
     min-height: calc(100vh - 80px);
     display: flex;
     flex-direction: column;
