@@ -312,3 +312,14 @@ p {
     }
    
 }
+#options {
+    opacity: 0; 
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.3s ease, max-height 0.3s ease; 
+}
+
+#options.show {
+    opacity: 1; 
+    max-height: 500px; 
+}

@@ -118,7 +118,7 @@ form.addEventListener("submit", (e) => {
             margin: auto;
             padding: 20px;
             border: 1px solid #ddd;
-            background-color: black;
+            background-color: white;
             color: #333;
           }
           .resume-header {
@@ -190,35 +190,19 @@ form.addEventListener("submit", (e) => {
         </div>
       `;
 
-      // Create and configure the download link
-      const downloadLink = document.createElement("a");
-      downloadLink.href = `data:text/html;charset=utf-8,${encodeURIComponent(resumeContent.innerHTML)}`;
-      downloadLink.download = unique_path;
-      downloadLink.textContent = "Download Resume";
+ 
 
-      // Create and configure the edit button
-      const editButton = document.createElement("button");
-      editButton.textContent = "Edit";
-      editButton.className = "edit-button";
-      editButton.addEventListener("click", () => {
-        // Show the form and hide the resume preview
-        form.style.display = "block";
-        resumePreview.style.display = "none";
-        resumeContent.classList.remove("hidden");
-      });
-
-      // Append buttons to resume preview
+      
+    
       resumePreview.innerHTML = resumeContent.innerHTML;
-      resumePreview.appendChild(downloadLink);
-      resumePreview.appendChild(editButton);
-
-      // Display Resume Preview
       resumePreview.style.display = "block";
       resumeContent.classList.add("hidden");
-
-      // Hide the form
+      
+      
       form.style.display = "none";
     };
     reader.readAsDataURL(pictureFile);
   }
+
 });
+ 

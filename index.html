@@ -37,10 +37,13 @@
             <p>Create your professional resume in just a few clicks.</p>
             <button id="getStartedButton" class="button">Get Started</button>
         
-        <div id="options" style="display: none; margin-top: 1rem;">
-            <a href="./static.html" class="button">Static resume</a>
-            <a href="./dynamic.html" class="button">Dynamic resume</a>
-        </div>
+            <div id="options" class="options-hidden" style="margin-top: 1rem;">
+                <a href="./static.html" class="button">Static resume</a>
+                <a href="./dynamic.html" class="button">Dynamic resume</a>
+                <a href="./editable.html" class="button">Editable resume</a>
+                <a href="./download.html" class="button">Download and Shareable resume</a>
+            </div>
+            
            
           
         </div>
@@ -113,17 +116,17 @@
 
     <script>
         const getStartedButton = document.getElementById("getStartedButton");
-        const options = document.getElementById("options");
-    
-        getStartedButton.addEventListener("click", () => {
-            if (options.style.display === "none" || options.style.display === "") {
-                options.style.display = "block";
-                getStartedButton.textContent = "Close"; 
-            } else {
-                options.style.display = "none"; 
-                getStartedButton.textContent = "Get Started";
-            }
-        });
+const options = document.getElementById("options");
+
+getStartedButton.addEventListener("click", () => {
+    options.classList.toggle("show"); 
+    if (options.classList.contains("show")) {
+        getStartedButton.textContent = "Close"; 
+    } else {
+        getStartedButton.textContent = "Get Started";
+    }
+});
+
     </script>
     
     
