@@ -272,7 +272,9 @@ p {
 .footer-content p{
     color:var(--clr-grey)
 }
-
+.first{
+    margin-bottom: 60px;
+}
 .footer-content p span {
     color: var(--clr-white);
 }
@@ -283,6 +285,7 @@ p {
     .build{
         text-align: center;
     }
+   
 }
 
 @media screen and (min-width: 992px) {
@@ -307,4 +310,5 @@ p {
     .build{
         text-align: center;
     }
+   
 }
