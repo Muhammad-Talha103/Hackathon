@@ -8,7 +8,8 @@ form.addEventListener("submit", function (e) {
     // Personal Information Inputs
     var name = document.getElementById("fullName").value;
     var resumeName = document.getElementById("resume");
-    var fatherName = document.getElementById("fatherName").value;
+    var fatherName = document.getElementById("fatherName")
+        .value;
     var email = document.getElementById("email").value;
     var phone = document.getElementById("phone").value;
     var genderSelect = document.getElementById("gender");
@@ -58,8 +59,10 @@ form.addEventListener("submit", function (e) {
         return;
     }
     // Educational Information Inputs
-    var education = document.getElementById("education").value;
-    var institute = document.getElementById("institute").value;
+    var education = document.getElementById("education")
+        .value;
+    var institute = document.getElementById("institute")
+        .value;
     var grade = document.getElementById("grade").value;
     var awards = document.getElementById("awards").value;
     if (education === "") {
@@ -81,8 +84,10 @@ form.addEventListener("submit", function (e) {
     var skills = document.getElementById("skills").value;
     var computerSkills = document.getElementById("computerSkills").value;
     // Experience Information Inputs
-    var experience = document.getElementById("experience").value;
-    var companyName = document.getElementById("company").value;
+    var experience = document.getElementById("experience")
+        .value;
+    var companyName = document.getElementById("company")
+        .value;
     // Handle Picture
     var pictureFile = (_a = pictureInput.files) === null || _a === void 0 ? void 0 : _a[0];
     var profilePicUrl = "";
@@ -93,16 +98,23 @@ form.addEventListener("submit", function (e) {
         reader.onload = function (event) {
             profilePicUrl = event.target.result;
             // Generate Resume Content with CSS Styles
-            resumeContent.innerHTML = "\n        <style>\n          .resume-container {\n            font-family: Arial, sans-serif;\n            max-width: 800px;\n            margin: auto;\n            padding: 20px;\n            border: 1px solid #ddd;\n            background-color: white;\n            color: #333;\n          }\n          .resume-header {\n            display: flex;\n            align-items: center;\n            margin-bottom: 20px;\n          }\n          .name {\n            flex: 1;\n            font-size: 24px;\n            font-weight: bold;\n          }\n          .profile-pic {\n            width: 80px;\n            height: 80px;\n            border-radius: 50%;\n            object-fit: cover;\n            margin-left: 20px;\n          }\n          .personal-info, .education, .skills, .experience {\n            margin-bottom: 20px;\n          }\n          .personal-info h2, .education h2, .skills h2, .experience h2 {\n            font-size: 20px;\n            margin-bottom: 10px;\n            border-bottom: 1px solid #ddd;\n            padding-bottom: 5px;\n            color: #4a4a4a;\n          }\n          p {\n            margin: 5px 0;\n          }\n          strong {\n            color: #555;\n          }\n              .download-button {\n    display: inline-block;\n    margin-top: 20px;\n    padding: 10px 20px;\n    font-size: 16px;\n    font-weight: bold;\n    color: #fff;\n    background-color: #4CAF50; /* Green background */\n    border: none;\n    border-radius: 5px;\n    text-decoration: none;\n    transition: background-color 0.3s ease;\n  }\n\n  .download-button:hover {\n    background-color: #45a049; /* Darker green on hover */\n  }\n    .share-button {\n            display: inline-block;\n            margin-top: 20px;\n            padding: 10px 20px;\n            font-size: 16px;\n            font-weight: bold;\n            color: #fff;\n            background-color: #007BFF; /* Blue background */\n            border: none;\n            border-radius: 5px;\n            text-decoration: none;\n            cursor: pointer;\n            transition: background-color 0.3s ease;\n          }\n          .share-button:hover {\n            background-color: #0056b3; /* Darker blue on hover */\n          }\n\n        </style>\n        <div class=\"resume-container\">\n          <div class=\"resume-header\">\n            <h3 class=\"name\">".concat(name, "</h3>\n            <img src=\"").concat(profilePicUrl, "\" alt=\"Profile Picture\" class=\"profile-pic\" />\n          </div>\n          <div class=\"personal-info\">\n            <h2>Personal Information</h2>\n            <p><strong>Father's Name:</strong> ").concat(fatherName, "</p>\n            <p><strong>Email:</strong> ").concat(email, "</p>\n            <p><strong>Gender:</strong> ").concat(genderInput, "</p>\n            <p><strong>Age:</strong> ").concat(age, "</p>\n            <p><strong>Date of Birth:</strong> ").concat(dateOfBirth.toDateString(), "</p>\n            <p><strong>Marital Status:</strong> ").concat(maritalStatus, "</p>\n            <p><strong>Phone:</strong> ").concat(phone, "</p>\n          </div>\n          <div class=\"education\">\n            <h2>Education</h2>\n            <p><strong>Degree:</strong> ").concat(education, "</p>\n            <p><strong>Institute:</strong> ").concat(institute, "</p>\n            <p><strong>Grade:</strong> ").concat(grade, "</p>\n            <p><strong>Awards:</strong> ").concat(awards, "</p>\n          </div>\n          <div class=\"skills\">\n            <h2>Skills</h2>\n            <p><strong>General Skills:</strong> ").concat(skills, "</p>\n            <p><strong>Computer Skills:</strong> ").concat(computerSkills, "</p>\n          </div>\n          <div class=\"experience\">\n            <h2>Experience</h2>\n            <p><strong>Job Title:</strong> ").concat(experience, "</p>\n            <p><strong>Company Name:</strong> ").concat(companyName, "</p>\n          </div>\n        </div>\n      ");
+            resumeContent.innerHTML = "\n        <style>\n          .resume-container {\n            font-family: Arial, sans-serif;\n            max-width: 800px;\n            margin: auto;\n            padding: 20px;\n            border: 1px solid #ddd;\n            background-color: white;\n            color: #333;\n          }\n          .resume-header {\n            display: flex;\n            align-items: center;\n            margin-bottom: 20px;\n          }\n          .name {\n            flex: 1;\n            font-size: 24px;\n            font-weight: bold;\n          }\n          .profile-pic {\n            width: 80px;\n            height: 80px;\n            border-radius: 50%;\n            object-fit: cover;\n            margin-left: 20px;\n          }\n          .personal-info, .education, .skills, .experience {\n            margin-bottom: 20px;\n          }\n          .personal-info h2, .education h2, .skills h2, .experience h2 {\n            font-size: 20px;\n            margin-bottom: 10px;\n            border-bottom: 1px solid #ddd;\n            padding-bottom: 5px;\n            color: #4a4a4a;\n          }\n          p {\n            margin: 5px 0;\n          }\n          strong {\n            color: #555;\n          }\n              .download-button {\n    display: inline-block;\n    margin-top: 20px;\n    padding: 10px 20px;\n    font-size: 16px;\n    font-weight: bold;\n    color: #fff;\n    background-color: #4CAF50; /* Green background */\n    border: none;\n    border-radius: 5px;\n    text-decoration: none;\n    transition: background-color 0.3s ease;\n  }\n\n  .download-button:hover {\n    background-color: #45a049; \n  }\n              .share-button {\n    display: inline-block;\n    margin-top: 20px;\n    margin-left: 20px;\n    padding: 10px 20px;\n    font-size: 16px;\n    font-weight: bold;\n    color: #fff;\n    background-color: #1A91F0; \n    border: none;\n    border-radius: 5px;\n    text-decoration: none;\n    transition: background-color 0.3s ease;\n  }\n\n  .share-button:hover {\n    background-color: #1170cd; \n  }\n\n\n        </style>\n        <div class=\"resume-container\">\n          <div class=\"resume-header\">\n            <h3 class=\"name\">".concat(name, "</h3>\n            <img src=\"").concat(profilePicUrl, "\" alt=\"Profile Picture\" class=\"profile-pic\" />\n          </div>\n          <div class=\"personal-info\">\n            <h2>Personal Information</h2>\n            <p><strong>Father's Name:</strong> ").concat(fatherName, "</p>\n            <p><strong>Email:</strong> ").concat(email, "</p>\n            <p><strong>Gender:</strong> ").concat(genderInput, "</p>\n            <p><strong>Age:</strong> ").concat(age, "</p>\n            <p><strong>Date of Birth:</strong> ").concat(dateOfBirth.toDateString(), "</p>\n            <p><strong>Marital Status:</strong> ").concat(maritalStatus, "</p>\n            <p><strong>Phone:</strong> ").concat(phone, "</p>\n          </div>\n          <div class=\"education\">\n            <h2>Education</h2>\n            <p><strong>Degree:</strong> ").concat(education, "</p>\n            <p><strong>Institute:</strong> ").concat(institute, "</p>\n            <p><strong>Grade:</strong> ").concat(grade, "</p>\n            <p><strong>Awards:</strong> ").concat(awards, "</p>\n          </div>\n          <div class=\"skills\">\n            <h2>Skills</h2>\n            <p><strong>General Skills:</strong> ").concat(skills, "</p>\n            <p><strong>Computer Skills:</strong> ").concat(computerSkills, "</p>\n          </div>\n          <div class=\"experience\">\n            <h2>Experience</h2>\n            <p><strong>Job Title:</strong> ").concat(experience, "</p>\n            <p><strong>Company Name:</strong> ").concat(companyName, "</p>\n          </div>\n        </div>\n      ");
             // Create and configure the download link
             var downloadLink = document.createElement("a");
             downloadLink.href = "data:text/html;charset=utf-8,".concat(encodeURIComponent(resumeContent.innerHTML));
             downloadLink.download = unique_path_1;
-            downloadLink.textContent = "Download Resume";
+            downloadLink.textContent = "Download";
             downloadLink.className = "download-button";
+            // Create shareable link
+            var shareableLink = document.createElement("a");
+            shareableLink.href = "data:text/html;charset=utf-8,".concat(encodeURIComponent(resumeContent.innerHTML));
+            shareableLink.target = "_blank";
+            shareableLink.textContent = "Share";
+            shareableLink.className = "share-button";
             // Append buttons to resume preview
             resumePreview.innerHTML = resumeContent.innerHTML;
             resumePreview.appendChild(downloadLink);
+            resumePreview.appendChild(shareableLink);
             // Display Resume Preview
             resumePreview.style.display = "block";
             resumeContent.classList.add("hidden");

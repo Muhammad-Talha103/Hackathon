@@ -187,7 +187,25 @@ form.addEventListener("submit", (e) => {
   }
 
   .download-button:hover {
-    background-color: #45a049; /* Darker green on hover */
+    background-color: #45a049; 
+  }
+              .share-button {
+    display: inline-block;
+    margin-top: 20px;
+    margin-left: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #1A91F0; 
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+
+  .share-button:hover {
+    background-color: #1170cd; 
   }
 
 
@@ -233,12 +251,20 @@ form.addEventListener("submit", (e) => {
         resumeContent.innerHTML
       )}`;
       downloadLink.download = unique_path;
-      downloadLink.textContent = "Download Resume";
+      downloadLink.textContent = "Download";
       downloadLink.className = "download-button";
+
+      // Create shareable link
+      const shareableLink = document.createElement("a");
+      shareableLink.href = `data:text/html;charset=utf-8,${encodeURIComponent(resumeContent.innerHTML)}`;
+      shareableLink.target = "_blank";
+      shareableLink.textContent = "Share";
+      shareableLink.className = "share-button";
 
       // Append buttons to resume preview
       resumePreview.innerHTML = resumeContent.innerHTML;
       resumePreview.appendChild(downloadLink);
+      resumePreview.appendChild(shareableLink);
 
       // Display Resume Preview
       resumePreview.style.display = "block";
